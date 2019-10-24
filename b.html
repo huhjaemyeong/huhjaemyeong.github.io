@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<style media="screen">
+  *{margin:0;padding:0;}
+  div{
+  position: fixed;}
+  img {display:block;}
+  A:link {text-decoration: none; color: #86B3B7;}
+  A:visited{text-decoration: none; color: #86B3B7;}
+  A:active{text-decoration: none; color: #86B3B7;}
+  A:hover{text-decoration: none; color: #86B3B7;}
+
+  footer{
+    width: 100%;
+    height: 100px;
+    margin-top: 30px;
+    background-color: #86B3B7;
+  }
+  #footer_box{
+    width: 1140px;
+    height: 100px;
+    margin: 0 auto;
+  }
+  #footerlogo{
+    margin: 5px 5px 5px 5px;
+  }
+  #category{
+    padding:30px;
+    font-size:18px;
+    font-weight: bold;
+  }
+</style>
+  <head>
+    <script type="text/javascript">
+    var image1 = new Image()
+    image1.src = "./r1.jpg"
+    var image2 = new Image()
+    image2.src = "./r2.jpg"
+    var image3 = new Image()
+    image3.src = "./r3.jpg"
+    var image4 = new Image()
+    image4.src = "./r5.jpg"
+    </script>
+  </head>
+  <body>
+    <div id='category'>
+      <span><a href="about.html" target="if_a">DIR</a></span>&nbsp&nbsp&nbsp&nbsp
+      <span><a href="shop.html" target='_blank'>SHOP</a></span>&nbsp&nbsp&nbsp&nbsp
+      <span><a href="movie.html" target="if_a">MOVIE</a></span>&nbsp&nbsp&nbsp&nbsp
+      <span><a href="comment.html" target="if_a">COMMENT</a></span></div>
+      <p><img src="./11.jpg" width=100% name="slide" style=margin:0;padding:0;/></p>
+    <script type="text/javascript">
+            var step=1;
+            function slideit()
+            {
+                document.images.slide.src = eval("image"+step+".src");
+                if(step<4)
+                    step++;
+                else
+                    step=1;
+                setTimeout("slideit()",2500);
+            }
+            slideit();
+    </script>
+    <p/>
+    <iframe src="about.html" frameborder="0" width='100%' height="3500" name="if_a" marginwidth="50" frameborder="0" scrolling="no"></iframe>
+    <footer>
+      <div id="footer_box">
+        <div id='footer_logo'>
+          <img src='./mlogo.png' width="100%">
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
